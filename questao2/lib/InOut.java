@@ -19,7 +19,7 @@ public class InOut {
 	 * Este metodo eh para entrada de uma String. Tem como parametro de entrada
 	 * uma String que indicara para o usuario qual o dado que sera lido naquele
 	 * momento por aquela caixa de texto e retorna a String lida
-	 * 
+	 *
 	 * @param frase que sera usada para o usuario saber qual dado sera lido
 	 * @return String que foi lida
 	 */
@@ -258,9 +258,11 @@ public class InOut {
 	 *  
 	 * @param cabecalho que aparecer no topo da mensagem
 	 * @param frase     que aparecera dentro da caixa de mensagem
+	 * @return 
 	 */
-	public static void MsgDeInformacao(String cabecalho, String frase){
+	public static Boolean MsgDeInformacao(String cabecalho, String frase){
 		JOptionPane.showMessageDialog(null, frase, cabecalho, JOptionPane.INFORMATION_MESSAGE);
+		return null;
 	}
 
 	/**
@@ -296,5 +298,10 @@ public class InOut {
 		MsgDeInformacao("MsgDeInformacao", nome + " tem " + idade + " anos." );
 		MsgSemIcone("MsgSemIcone", nome + " tem " + idade + " anos." );
 		MsgDeAviso("MsgDeAviso", nome + " tem " + idade + " anos." );
+	}
+
+	public static boolean MsgDeConfirmacao (String cabecalho, String frase){
+		int resposta = JOptionPane.showConfirmDialog(null, frase, cabecalho, JOptionPane.YES_NO_OPTION);
+		return resposta == 0 ? true : false;
 	}
 }

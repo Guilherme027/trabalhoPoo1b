@@ -3,7 +3,7 @@ package questao3.src;
 /**
  * Classe que representa um crédito de apostas.
  *
- * @author [Nome do Autor]
+ * @author Grupo 5
  */
 public class Credito {
 

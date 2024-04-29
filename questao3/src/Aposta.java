@@ -5,7 +5,7 @@ import questao3.lib.InOut;
 /**
  * Classe que representa uma aposta em um jogo.
  *
- * @author [Nome do Autor]
+ * @author Grupo 5
  */
 public class Aposta {
 
@@ -17,32 +17,32 @@ public class Aposta {
     /**
      * Identificador único da aposta.
      */
-    private int idAposta;
+    int idAposta;
 
     /**
      * Valor da aposta realizada pelo jogador.
      */
-    private double valorAposta;
+    double valorAposta;
 
     /**
      * Jogo ao qual a aposta se refere.
      */
-    private Jogo jogo;
+    Jogo jogo;
 
     /**
      * Jogador que realizou a aposta.
      */
-    private Jogador jogador;
+    Jogador jogador;
 
     /**
      * Indica se a aposta já foi finalizada (ou seja, se o resultado já foi definido).
      */
-    private boolean isFinalizada;
+    boolean isFinalizada;
 
     /**
      * Indica se o jogador venceu ou perdeu a aposta.
      */
-    private boolean resultado;
+    boolean resultado;
 
     /**
      * Construtor da classe Aposta.

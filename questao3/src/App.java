@@ -5,7 +5,7 @@ import questao3.lib.InOut;
 /**
  * Classe principal da aplicação POO bet.
  *
- * @author [Nome do Autor]
+ * @author Grupo 5
  */
 public class App {
 

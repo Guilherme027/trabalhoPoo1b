@@ -3,7 +3,7 @@ package questao3.src;
 /**
  * Classe que representa um jogo no qual é possível realizar apostas.
  *
- * @author [Nome do Autor]
+ * @author Grupo 5
  */
 public class Jogo {
 
