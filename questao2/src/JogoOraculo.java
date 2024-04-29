@@ -18,8 +18,8 @@ public class JogoOraculo {
         // Cria uma instância do Oráculo
         Oraculo oraculo = new Oraculo();
 
-        // Inicia o prólogo da introdução do jogo
-        oraculo.prologoIntroducao();
+        // Inicia da introdução do jogo
+        oraculo.Introducao();
 
         // Enquanto o jogador não passar do primeiro nível, continua tentando
         while (oraculo.loadLevel01()) {

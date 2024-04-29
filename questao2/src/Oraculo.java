@@ -14,7 +14,7 @@ public class Oraculo {
     /**
      * Método que inicia o prólogo de introdução do jogo.
      */
-    public void prologoIntroducao() {
+    public void Introducao() {
         String cabecalho = "Início da Aventura";
         InOut.MsgDeAviso(cabecalho, "Bem-vindo, aventureiro! Eu sou o Oráculo, e estou aqui para guiá-lo em sua jornada.");
 
