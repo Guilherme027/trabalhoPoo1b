@@ -2,10 +2,21 @@ package questao3.src;
 
 import questao3.lib.InOut;
 
-
+/**
+ * Classe principal da aplicação POO bet.
+ *
+ * @author [Nome do Autor]
+ */
 public class App {
+
+    /**
+     * Ponto de entrada da aplicação.
+     *
+     * @param args Argumentos da linha de comando.
+     */
     public static void main(String[] args) {
         int opcao;
+
         do {
             InOut.MsgDeInformacao("POO bet",
                     "Seja bem vindo ao POO bet\n\n As opções disponíveis são: \n [1] CADASTRAR E FAZER APOSTA \n [2] LISTAR TODAS AS APOSTAS \n[0] SAIR DO POO BET");
@@ -28,7 +39,10 @@ public class App {
         } while (opcao != 0);
     }
 
-    public static void cadastrarEFazerAposta() {
+    /**
+     * Cadastra um novo jogador e permite que ele faça uma aposta.
+     */
+    private static void cadastrarEFazerAposta() {
         String nome = InOut.leString("Digite o nome do jogador: ");
         String sobrenome = InOut.leString("Digite o sobrenome do jogador: ");
         String apelido = InOut.leString("Digite o apelido do jogador: ");
@@ -58,12 +72,13 @@ public class App {
                             InOut.MsgSemIcone("Menu",
                                     "Aposta cancelada com sucesso. Saldo atual do jogador: " + jogador.getSaldo());
                         }
+
+                        int continuarApostando = InOut.leInt("Deseja continuar apostando? (1 - Sim / 0 - Não): ");
+                        if (continuarApostando == 0) {
+                            break;
+                        }
                     }
 
-                    int continuarApostando = InOut.leInt("Deseja continuar apostando? (1 - Sim / 0 - Não): ");
-                    if (continuarApostando == 0) {
-                        break;
-                    }
                 } else {
                     InOut.MsgDeErro("Menu",
                             "Não foi possível fazer a aposta. Verifique seu saldo e o valor da aposta.");
@@ -74,14 +89,17 @@ public class App {
         } while (true);
     }
 
-    public static void listarApostas() {
+    /**
+     * Lista todas as apostas cadastradas no sistema.
+     */
+    private static void listarApostas() {
         for (Jogador jogador : Jogador.jogadoresCadastrados) {
             InOut.MsgSemIcone("Apostas de " + jogador.nome, "Total de apostas: " + jogador.getAllApostas().size());
             for (Aposta aposta : jogador.getAllApostas()) {
                 InOut.MsgSemIcone("Aposta #" + aposta.getIdAposta(),
-                        "Valor: " + aposta.getValorAposta() + ", Jogo: " + aposta.getJogo().getDescricao());
-                aposta.calcularPremio();
+                                "Valor: " + aposta.getValorAposta() + ", Jogo: " + aposta.getJogo().getDescricao());
+                        aposta.calcularPremio();
+                    }
+                }
             }
         }
-    }
-}

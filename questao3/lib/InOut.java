@@ -36,7 +36,8 @@ public class InOut {
 	 * lido naquele momento por aquela caixa de texto. 
 	 * Le entao uma String e a converte para um objeto do tipo byte. 
 	 * Se na conversao ocorrer algum erro, o processo sera feito novamente, 
-	 * ou seja, sera lida outra String e convertida para byte. O processo soh 
+	 * ou seja, sera lida outra String e convertida pa
+	 * ra byte. O processo soh 
 	 * para quando a conversao for bem sucedida.  
 	 * 
 	 * @param frase que sera usada para o usuario saber qual dado sera lido
